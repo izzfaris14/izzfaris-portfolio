@@ -1,0 +1,6 @@
+.openai/*.tar.gz
+.openai/*.tgz
+.openai/*.zip
+node_modules/
+qa/
+reference-assets/
