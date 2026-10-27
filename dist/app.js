@@ -110,6 +110,47 @@ document.querySelectorAll('[data-project]').forEach(button => button.addEventLis
   if (project.links.length) { const links = element('div', 'dialog-links'); project.links.forEach(([label, href]) => { const link = element('a', '', label + ' ↗'); link.href = href; link.target = '_blank'; link.rel = 'noopener noreferrer'; links.append(link); }); content.append(links); }
   dialog.showModal(); dialog.scrollTop = 0; document.body.classList.add('dialog-lock');
 }));
+
+function openPhotoModal(imgSrc, imgAlt, captionText, metaText, triggerEl) {
+  lastProjectTrigger = triggerEl;
+  content.replaceChildren();
+  if (metaText) content.append(element('p', 'dialog-meta', metaText));
+  const heading = element('h2', '', captionText || imgAlt);
+  heading.id = 'dialog-title';
+  content.append(heading);
+  const img = element('img', 'dialog-image');
+  img.src = imgSrc;
+  img.alt = imgAlt;
+  img.style.maxHeight = '65vh';
+  img.style.objectFit = 'contain';
+  content.append(img);
+  if (captionText && imgAlt && captionText !== imgAlt) {
+    content.append(element('p', 'dialog-lead', imgAlt));
+  }
+  dialog.showModal();
+  dialog.scrollTop = 0;
+  document.body.classList.add('dialog-lock');
+}
+
+document.querySelectorAll('.gallery-item, .beyond-visual-wrap.interactive').forEach(item => {
+  const handler = () => {
+    const img = item.querySelector('img');
+    if (!img) return;
+    const figcaption = item.querySelector('figcaption');
+    const tag = item.querySelector('.beyond-tag');
+    const caption = figcaption ? figcaption.textContent : (tag ? tag.textContent : '');
+    const meta = tag ? tag.textContent : (item.closest('.beyond-grid')?.querySelector('.beyond-role-meta')?.textContent || 'GALLERY');
+    openPhotoModal(img.src, img.alt, caption, meta, item);
+  };
+  item.addEventListener('click', handler);
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handler();
+    }
+  });
+});
+
 function closeDialog() { dialog.close(); }
 document.querySelector('.dialog-close').addEventListener('click', closeDialog);
 dialog.addEventListener('click', event => { if (event.target === dialog) { const bounds = dialog.getBoundingClientRect(); if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeDialog(); } });

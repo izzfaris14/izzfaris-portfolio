@@ -14,7 +14,7 @@ From this directory run `python -m http.server 4173 --bind 127.0.0.1 --directory
 - https://github.com/izzfaris14/RoutePlanner
 - https://github.com/izzfaris14/LTA-hackathon-2026
 
-Project work is credited collectively to the five-person teams. The mailbox and telematics projects remain marked in progress. Screenshots are from the linked repositories. The attire screenshot is an unchanged frame extracted from the repository's animated demo. The original GIF is preserved locally in the ignored `reference-assets/` directory. The 3D hero is an illustrative mascot and not a photograph of a project or person. No private phone number or working résumé document is linked in the website.
+Project work is credited collectively to the five-person teams. The mailbox and telematics projects remain marked in progress. Screenshots are from the linked repositories. The attire screenshot is an unchanged frame extracted from the repository's animated demo. The original GIF is preserved locally in the ignored `reference-assets/` directory. SCDF photography features Station 441 operational crew, NDP 2024 Dynamic Defence Display (TD40), and night standby operations at Marina Bay. The 3D hero is an illustrative mascot and not a photograph of a project or person. No private phone number or working résumé document is linked in the website.
 
 ## Generated visual
 
