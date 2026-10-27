@@ -51,6 +51,17 @@ const projects = {
     details: ['Uses Agnes AI APIs to support digital wardrobe and outfit planning.', 'The team’s project aimed to reduce daily outfit decision stress and impulsive buying.', 'Awarded 1st place at the Agnes AI Hackathon hosted by Agnes AI and SMU AI.'],
     note: 'Developed by a five-person team at the Agnes AI Hackathon in June 2026.',
     links: [], source: 'Résumé awards and competitions'
+  },
+  custompc: {
+    title: 'Custom Rig Architecture.', meta: 'HARDWARE & SYSTEMS / PERSONAL EXPLORATION',
+    lead: 'A hands-on deep dive into PC hardware assembly, thermal dynamics, and performance benchmarking.',
+    details: [
+      'Component matching, evaluating motherboard VRM phases, PCIe lane distribution, and memory timing compatibility.',
+      'Optimizing thermal dissipation, static pressure fan configurations, and negative vs positive airflow dynamics.',
+      'BIOS tuning, power curves, memory XMP/EXPO profiling, and stability stress-testing across sustained compute loads.'
+    ],
+    note: 'Personal engineering exploration bridging foundational mechanical packaging with electronic hardware performance.',
+    links: [], source: 'Personal hobby & hardware exploration'
   }
 };
 
