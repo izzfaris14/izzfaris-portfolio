@@ -20,6 +20,7 @@
       <span class="header-name">IZZ FARIS<br><span>Computer Engineering</span></span>
       <nav aria-label="Main navigation">
         <a href="#work">The work <span>↘</span></a>
+        <a href="#self-projects">Self-projects <span>↘</span></a>
         <a href="#about">The person</a>
         <a href="#beyond">Beyond the terminal <span>↘</span></a>
         <a href="#contact">Say hello <span>↗</span></a>
@@ -47,8 +48,8 @@
 
       <section class="work section" id="work" aria-labelledby="work-heading">
         <div class="work-heading reveal"><h2 id="work-heading">Made to <em>work.</em></h2><p>A selection of team projects, from physical prototypes to software that solves real constraints.</p></div>
-        <div class="filters" role="group" aria-label="Filter projects"><button type="button" class="active" data-filter="all" aria-pressed="true">All projects <sup>8</sup></button><button type="button" data-filter="hardware" aria-pressed="false">Hardware &amp; embedded</button><button type="button" data-filter="software" aria-pressed="false">Software &amp; AI</button></div>
-        <p class="sr-only" role="status" id="filter-status">Showing all 8 projects.</p>
+        <div class="filters" role="group" aria-label="Filter projects"><button type="button" class="active" data-filter="all" aria-pressed="true">All team projects <sup>7</sup></button><button type="button" data-filter="hardware" aria-pressed="false">Hardware &amp; embedded</button><button type="button" data-filter="software" aria-pressed="false">Software &amp; AI</button><a class="filter-tab-link" href="#self-projects">Self-projects <span>↘</span></a></div>
+        <p class="sr-only" role="status" id="filter-status">Showing all 7 team projects.</p>
         <div class="project-grid" id="project-grid">
           <article class="project project-featured reveal" data-category="hardware software">
             <button type="button" class="project-visual attire-visual" data-project="attire" aria-label="Read about the Dual-Pi Attire Check System"><img src="assets/attire-still.png" alt="Actual attire detection demo from the Dual-Pi project repository" width="600" height="338" loading="lazy"><span class="project-open" aria-hidden="true">↗</span></button>
@@ -69,11 +70,67 @@
           <article class="project project-compact reveal" data-category="hardware"><button class="compact-project" type="button" data-project="fpga"><span class="compact-icon" aria-hidden="true">[01]</span><div><span class="project-meta">DIGITAL SYSTEMS</span><h3>Logic, on hardware.</h3><p>FPGA traffic controller using VHDL and a deterministic state machine.</p><span class="project-tech">Basys 3 / Vivado / VHDL</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
           <article class="project project-compact reveal" data-category="software"><button class="compact-project" type="button" data-project="telematics"><span class="compact-icon" aria-hidden="true">~↗</span><div><span class="project-meta">MACHINE LEARNING · IN PROGRESS</span><h3>Reading the road.</h3><p>A telematics pipeline exploring driving behaviours and incident risk.</p><span class="project-tech">Python / scikit-learn / Docker</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
           <article class="project project-compact project-fitz reveal" data-category="software"><button class="compact-project" type="button" data-project="fitz"><span class="compact-icon fitz-mark" aria-hidden="true">f<span>i</span>tz</span><div><span class="project-meta">AI APPLICATION / HACKATHON</span><h3>A wardrobe with a plan.</h3><p>FitZ, an AI-powered digital wardrobe and automated outfit planner.</p><span class="project-tech">Agnes AI APIs / Team project</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
-          <article class="project project-compact reveal" data-category="hardware"><button class="compact-project" type="button" data-project="custompc"><span class="compact-icon" aria-hidden="true">PC</span><div><span class="project-meta">HARDWARE EXPLORATION · HOBBY</span><h3>Building from silicon up.</h3><p>Custom PC architecture, thermal airflow dynamics, and system stress-benchmarking.</p><span class="project-tech">Thermals / BIOS tuning / Hardware assembly</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
         </div>
       </section>
 
       <section class="recognition section" aria-labelledby="recognition-heading"><h2 id="recognition-heading" class="reveal">Built together.<br><em>Recognised together.</em></h2><div class="awards"><div class="award reveal"><span class="place">1<span>st</span></span><div><h3>Agnes AI Hackathon</h3><p>FitZ / Five-person team</p><span>JUNE 2026</span></div><span class="award-symbol" aria-hidden="true">✳</span></div><div class="award reveal"><span class="place">2<span>nd</span></span><div><h3>Nebula X Hackathon</h3><p>PLiZ / LTA @ NUS / Five-person team</p><span>SEPTEMBER 2026</span></div><span class="award-symbol" aria-hidden="true">✳</span></div></div></section>
+
+      <section class="self-projects section" id="self-projects" aria-labelledby="self-projects-heading">
+        <div class="self-header reveal">
+          <div class="self-badge">INDEPENDENT BUILDS · LAB &amp; WORKBENCH</div>
+          <h2 id="self-projects-heading">Driven by <em>curiosity.</em></h2>
+          <p>Personal engineering explorations, custom hardware setups, and self-directed experiments built outside the curriculum. A dedicated space for independent builds, with more in progress.</p>
+        </div>
+
+        <div class="self-filters" role="group" aria-label="Filter self-projects">
+          <button type="button" class="active" data-self-filter="all" aria-pressed="true">All self-projects <sup>2</sup></button>
+          <button type="button" data-self-filter="hardware" aria-pressed="false">Hardware &amp; thermals</button>
+          <button type="button" data-self-filter="in-progress" aria-pressed="false">In progress</button>
+        </div>
+
+        <div class="self-grid" id="self-grid">
+          <article class="self-card self-card-featured reveal" data-category="hardware">
+            <button type="button" class="self-visual pc-visual" data-project="custompc" aria-label="Read about Custom Rig Architecture and Thermal Dynamics">
+              <div class="pc-terminal-header">
+                <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                <span class="term-title">hardware_lab // custom_rig_thermals.sys</span>
+                <span class="term-badge">BENCHMARKED</span>
+              </div>
+              <div class="pc-terminal-body">
+                <div class="pc-spec-line"><span class="spec-label">ARCHITECTURE</span><span class="spec-val">Mid-Tower / High Static Pressure Airflow</span></div>
+                <div class="pc-spec-line"><span class="spec-label">THERMAL MODEL</span><span class="spec-val">Positive Static Pressure / Tuned Intake Curves</span></div>
+                <div class="pc-spec-line"><span class="spec-label">POWER DELIVERY</span><span class="spec-val">Multi-Phase VRM / LLC Voltage Stability</span></div>
+                <div class="pc-spec-line"><span class="spec-label">MEMORY TUNING</span><span class="spec-val">Sub-Timing Compression / Sustained Compute Stress</span></div>
+              </div>
+              <span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="self-card-info">
+              <div class="self-card-meta">HARDWARE EXPLORATION · THERMAL DYNAMICS</div>
+              <h3><button type="button" data-project="custompc">Custom Rig Architecture &amp; Thermal Engineering</button></h3>
+              <p>A hands-on deep dive into PC hardware assembly, thermal airflow dynamics, motherboard VRM load balancing, and BIOS-level memory timing optimization. Stress-benchmarked for maximum stability under sustained compute workloads.</p>
+              <div class="self-card-tech">Static pressure thermals <span>/</span> BIOS power curves <span>/</span> Hardware assembly</div>
+            </div>
+          </article>
+
+          <article class="self-card self-card-wip reveal" data-category="in-progress">
+            <div class="wip-visual">
+              <div class="wip-pulse"><span class="pulse-ring"></span><span class="pulse-core"></span></div>
+              <div class="wip-code">[ACTIVE WORKBENCH // LAB BENCH 01]</div>
+              <div class="wip-specs">
+                <span>ESP32 Sensor Matrix</span>
+                <span>Custom Circuit Prototyping</span>
+                <span>Low-Power Sleep Optimization</span>
+              </div>
+            </div>
+            <div class="self-card-info">
+              <div class="self-card-meta">EMBEDDED SYSTEMS · IN PROGRESS</div>
+              <h3>Next Self-Project in the Pipeline</h3>
+              <p>Currently on the workbench: experimenting with low-power microcontroller peripherals, multi-sensor telemetry, and standalone firmware architecture. Full schematics, code, and build logs will be documented here upon completion.</p>
+              <div class="self-card-tech">ESP32 <span>/</span> Sensors <span>/</span> Custom firmware</div>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <section class="beyond section" id="beyond" aria-labelledby="beyond-heading">
         <div class="beyond-header reveal">
@@ -155,20 +212,43 @@
           </div>
         </div>
 
-        <div class="beyond-subcards beyond-subcards-single">
-          <article class="beyond-subcard reveal">
-            <div class="subcard-header">
-              <span class="subcard-tag">YOUTH MENTORSHIP &amp; ADVOCACY</span>
-              <span class="subcard-period">2025</span>
+        <!-- MENDAKI CLUB YOUTH MENTOR SEGMENT -->
+        <div class="beyond-grid beyond-grid-mendaki">
+          <article class="beyond-card beyond-card-main reveal">
+            <div class="beyond-visual-wrap interactive" tabindex="0" role="button" aria-label="View photo: MENDAKI PEER Community Programme Bonding Event">
+              <img src="assets/mendaki-peer-bonding.jpg" alt="MENDAKI Club PEER Community Programme cohort bonding event gathering" class="beyond-img" loading="lazy">
+              <div class="beyond-tag">MENDAKI · PEER COMMUNITY PROGRAMME</div>
             </div>
-            <h3>MENDAKI Club Youth Mentor</h3>
-            <p>Guiding secondary school youths through experiential team-building initiatives, reflective workshops, and academic resilience coaching. Fostering confidence, peer belonging, and community connection to empower the next generation to overcome challenges and achieve their educational aspirations.</p>
-            <div class="subcard-footer">
-              <span>Youth Mentorship</span>
-              <span>Resilience Workshops</span>
-              <span>Community Impact</span>
+            <div class="beyond-card-body">
+              <div class="beyond-role-meta">YOUTH MENTORSHIP &amp; ADVOCACY · 2025</div>
+              <h3>Empowering Youths Through Mentorship &amp; Tech</h3>
+              <p>Serving as a Youth Mentor with MENDAKI Club under the <strong>PEER Community Programme</strong> is an opportunity to pay forward the guidance I’ve received and empower secondary school students during a pivotal stage in their personal and academic journeys.</p>
+              <p>Beyond academic support, our mentorship focuses on holistic resilience, social-emotional development, and peer belonging. Through experiential outdoor trails and interactive team-building challenges, we create an open environment where youths learn to collaborate, communicate openly, and step outside their comfort zones with confidence.</p>
+              <p>I also helped guide youths through <strong>GoTech learning workshops</strong>, introducing them to microcontroller robotics, hardware components, and computational logic. Seeing students ignite their curiosity when assembling circuits and watching code come alive in hardware reinforces my belief that engineering is most powerful when shared to inspire others.</p>
+              <div class="beyond-stats">
+                <div class="beyond-stat"><strong>PEER Programme</strong><span>Cohort Mentorship</span></div>
+                <div class="beyond-stat"><strong>GoTech Series</strong><span>Robotics &amp; STEM</span></div>
+                <div class="beyond-stat"><strong>Youth Resilience</strong><span>Community Impact</span></div>
+              </div>
             </div>
           </article>
+          <div class="beyond-gallery beyond-gallery-mendaki reveal">
+            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: GoTech robotics and microcontroller workshop">
+              <img src="assets/mendaki-gotech-robotics.jpg" alt="Youth mentors and students with laptops and robotics kits at the GoTech SPARKS workshop" loading="lazy">
+              <figcaption>GoTech robotics &amp; STEM learning workshop</figcaption>
+            </figure>
+            <div class="gallery-column">
+              <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Experiential team navigation trail">
+                <img src="assets/mendaki-experiential-trail.jpg" alt="Youths and mentors huddling over an activity map during team-building challenge" loading="lazy">
+                <figcaption>Experiential team-building &amp; trail challenge</figcaption>
+              </figure>
+              <div class="gallery-quote">
+                <span class="quote-symbol" aria-hidden="true">“</span>
+                <p>Nurturing self-belief, breaking down technical barriers, and empowering the next generation to aim higher.</p>
+                <span class="quote-author">MENDAKI CLUB · YOUTH MENTORSHIP</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

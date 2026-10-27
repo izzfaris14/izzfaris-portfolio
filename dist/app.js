@@ -95,6 +95,18 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   document.querySelector('#filter-status').textContent = `Showing ${count} ${filter === 'all' ? '' : filter + ' '}projects.`;
 }));
 
+const selfFilterButtons = document.querySelectorAll('[data-self-filter]');
+const selfCards = document.querySelectorAll('.self-card');
+selfFilterButtons.forEach(button => button.addEventListener('click', () => {
+  const filter = button.dataset.selfFilter;
+  selfFilterButtons.forEach(item => { const active = item === button; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
+  selfCards.forEach(card => {
+    const visible = filter === 'all' || card.dataset.category.split(' ').includes(filter);
+    card.hidden = !visible;
+    if (visible) card.classList.add('visible');
+  });
+}));
+
 const dialog = document.querySelector('#project-dialog');
 const content = document.querySelector('#dialog-content');
 let lastProjectTrigger;
