@@ -85,7 +85,7 @@
         <div class="self-filters" role="group" aria-label="Filter self-projects">
           <button type="button" class="active" data-self-filter="all" aria-pressed="true">All self-projects <sup>2</sup></button>
           <button type="button" data-self-filter="hardware" aria-pressed="false">Hardware &amp; thermals</button>
-          <button type="button" data-self-filter="in-progress" aria-pressed="false">In progress</button>
+          <button type="button" data-self-filter="in-progress" aria-pressed="false" class="filter-tab-construction">🚧 Under construction</button>
         </div>
 
         <div class="self-grid" id="self-grid">
@@ -113,21 +113,35 @@
           </article>
 
           <article class="self-card self-card-wip reveal" data-category="in-progress">
+            <div class="duct-tape tape-top-left" aria-hidden="true"></div>
+            <div class="duct-tape tape-top-right" aria-hidden="true"></div>
             <div class="wip-visual">
               <div class="wip-pulse"><span class="pulse-ring"></span><span class="pulse-core"></span><span class="wip-live-label">[ACTIVE LAB BENCH]</span></div>
-              <div class="wip-code">[STATUS: IN PROGRESS // MORE TO COME ↗]</div>
+              <div class="wip-code">[STATUS: UNDER CONSTRUCTION // BENCH ACTIVE ↗]</div>
               <div class="wip-specs">
                 <span>IoT &amp; Sensor Telemetry</span>
                 <span>Custom PCB Prototypes</span>
                 <span>Low-Power Firmware</span>
                 <span>Edge AI &amp; Hardware Hacks</span>
               </div>
+              <div class="hazard-stripes-wrap" aria-hidden="true">
+                <div class="hazard-tape tape-angle-1">
+                  <span class="tape-pinned tape-pin-left"></span>
+                  <span class="hazard-text">🚧 UNDER CONSTRUCTION // ACTIVE BENCH // DO NOT CROSS 🚧</span>
+                  <span class="tape-pinned tape-pin-right"></span>
+                </div>
+                <div class="hazard-tape tape-angle-2">
+                  <span class="tape-pinned tape-pin-left"></span>
+                  <span class="hazard-text">⚠ HARDWARE LAB IN PROGRESS // PROTOTYPES COMING ⚠</span>
+                  <span class="tape-pinned tape-pin-right"></span>
+                </div>
+              </div>
             </div>
             <div class="self-card-info">
-              <div class="self-card-meta">WORK IN PROGRESS · TEASER</div>
-              <h3>More Builds Coming Soon.</h3>
-              <p>I'm constantly embarking on new hardware explorations, embedded prototypes, and software side-projects. There's an active lineup of self-directed builds taking shape on my workbench—from custom sensor arrays to dedicated firmware architectures. I'll be sharing live schematics, code, and teardowns right here as each project drops. Stay tuned!</p>
-              <div class="self-card-tech">Embedded systems <span>/</span> Hardware hacks <span>/</span> More to come <span>●</span></div>
+              <div class="self-card-meta">LAB BENCH · UNDER CONSTRUCTION 🚧</div>
+              <h3>Under Construction — More Builds in the Works.</h3>
+              <p>Duct tape, breadboards, and logic analyzer probes are out on the desk. I'm actively prototyping new hardware explorations, custom microcontroller sensor nodes, and low-power embedded telemetry. Full schematics, PCB gerbers, firmware repos, and build logs will be documented here as they roll off the bench. Stay tuned!</p>
+              <div class="self-card-tech">Embedded systems <span>/</span> Hardware hacks <span>/</span> Schematics &amp; logs <span>●</span> In development</div>
             </div>
           </article>
         </div>
