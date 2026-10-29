@@ -48,6 +48,7 @@ const projects = {
   fitz: {
     title: 'A wardrobe with a plan.', meta: 'FITZ / AGNES AI HACKATHON / JUNE 2026',
     lead: 'An AI-powered digital wardrobe and automated outfit planner built by a five-person hackathon team.',
+    image: 'assets/hackathon-agnes-1st-place.jpg', imageAlt: 'FitZ five-person team awarded 1st Place at the Agnes AI Hackathon @ SMU',
     details: ['Uses Agnes AI APIs to support digital wardrobe and outfit planning.', 'The team’s project aimed to reduce daily outfit decision stress and impulsive buying.', 'Awarded 1st place at the Agnes AI Hackathon hosted by Agnes AI and SMU AI.'],
     note: 'Developed by a five-person team at the Agnes AI Hackathon in June 2026.',
     links: [], source: 'Résumé awards and competitions'
@@ -151,7 +152,11 @@ document.querySelectorAll('.gallery-item, .beyond-visual-wrap.interactive').forE
     const figcaption = item.querySelector('figcaption');
     const tag = item.querySelector('.beyond-tag');
     const caption = figcaption ? figcaption.textContent : (tag ? tag.textContent : '');
-    const meta = tag ? tag.textContent : (item.closest('.beyond-grid')?.querySelector('.beyond-role-meta')?.textContent || 'GALLERY');
+    const awardCard = item.closest('.award-card');
+    const awardTitle = awardCard?.querySelector('.award h3')?.textContent;
+    const awardPlace = awardCard?.querySelector('.award .place')?.textContent;
+    const awardMeta = awardTitle ? (awardPlace ? `${awardPlace} PLACE · ${awardTitle}`.toUpperCase() : awardTitle.toUpperCase()) : null;
+    const meta = tag ? tag.textContent : (awardMeta || item.closest('.beyond-grid')?.querySelector('.beyond-role-meta')?.textContent || 'GALLERY');
     openPhotoModal(img.src, img.alt, caption, meta, item);
   };
   item.addEventListener('click', handler);
