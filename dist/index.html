@@ -3,309 +3,510 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#4059f4">
-  <meta name="description" content="Izz Faris, Computer Engineering undergraduate at SIT. Explore embedded systems, edge AI, FPGA, and software engineering projects.">
-  <title>Izz Faris | Engineering, with curiosity.</title>
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Izz Faris — Computer Engineering undergraduate at Singapore Institute of Technology (SIT). Embedded systems, bare-metal firmware, FPGA synthesis, and edge AI computer vision.">
+  <title>Izz Faris — Systems and Computer Engineering</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/space-grotesk-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="assets/engineering-mascot.png" as="image">
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <link rel="preload" href="assets/space-grotesk-bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20261031_05">
+  <script src="app.js?v=20261031_05" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-frame">
     <header class="header">
       <a href="#home" class="wordmark" aria-label="Izz Faris home"><strong>IZZ FARIS</strong></a>
-      <span class="header-name"><span>Computer Engineering</span></span>
+      <span class="header-name"><span>Systems &amp; Computer Engineering</span></span>
       <nav aria-label="Main navigation">
-        <a href="#work">Academic Work 🏫 <span>↘</span></a>
-        <a href="#self-projects">Self-Discovery Projects 💭 <span>↘</span></a>
-        <a href="#about">About Me 😊</a>
-        <a href="#beyond">Beyond the Terminal &lt;/&gt; 💻 <span>↘</span></a>
-        <a href="#contact">Say hello <span>↗</span></a>
+        <a href="#about">About <span>↘</span></a>
+        <a href="#projects">Work <span>↘</span></a>
+        <a href="#stack">Tooling <span>↘</span></a>
+        <a href="#skills">Capabilities <span>↘</span></a>
+        <a href="#experience">Experience <span>↘</span></a>
+        <a href="projects.html" class="nav-archive-link">Archive <span>↗</span></a>
+        <a href="showroom.html" class="nav-showroom-link">Showroom <span>↗</span></a>
+        <a href="#contact">Contact <span>↘</span></a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme"><span aria-hidden="true">◐</span></button>
     </header>
 
     <main id="main">
-      <section class="hero" id="home" aria-labelledby="hero-heading">
-        <div class="hero-meta"><span>Embedded Systems<br>Computer Vision</span><span>Software Engineering<br>Applied Machine Learning</span><a href="https://github.com/izzfaris14" target="_blank" rel="noopener noreferrer">github.com/izzfaris14 ↗</a></div>
-        <h1 id="hero-heading" class="hero-title"><span class="sr-only">Izz Faris, computer engineering portfolio</span><span class="title-top" aria-hidden="true">P<span class="title-o">O<span>Computer<br>Engineering</span></span>RT</span><span class="title-bottom" aria-hidden="true">FOLI<span class="last-o">O<span>2026</span></span></span></h1>
-        <img class="mascot" src="assets/engineering-mascot.png" alt="Playful blue 3D computer with lime pixel eyes and an exposed circuit board" width="1280" height="1280" fetchpriority="high">
-        <div class="hero-bottom"><p>Hi, I’m Izz. I build things<br>where hardware meets software.</p><a class="round-link" href="#work">Explore my work <span aria-hidden="true">↘</span></a></div>
-      </section>
-
-      <section class="intro section" id="about" aria-labelledby="about-heading">
-        <div class="intro-name reveal" aria-hidden="true"><span class="code-fn">print</span><span class="code-paren">(</span>"Hello, I'm Izz Faris"<span class="code-paren">)</span></div>
-        <div class="intro-copy reveal">
-          <h2 id="about-heading">Curious about the code.<br>Hands-on with the hardware.</h2>
-          <p>I’m a Computer Engineering undergraduate at Singapore Institute of Technology, building embedded systems, computer vision pipelines, and practical software.</p>
-          <p>Before engineering, I served as a Fire &amp; Rescue Specialist. That experience still shapes how I work: stay calm, understand the problem, and trace it to the source.</p>
-          <div class="tool-tags" aria-label="Core tools"><span>C / C++</span><span>Python</span><span>ESP32</span><span>Raspberry Pi</span><span>VHDL</span></div>
+      <!-- 1. HERO SECTION WITH GREEN / EMERALD GRADIENT ORBS -->
+      <section class="new-hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-orb-wrap hero-orb-wrap-one" aria-hidden="true">
+          <div class="hero-orb hero-orb-one"></div>
         </div>
-      </section>
-
-      <section class="work section" id="work" aria-labelledby="work-heading">
-        <div class="work-heading reveal"><h2 id="work-heading">Made to <em>work.</em></h2><p>A selection of team projects, from physical prototypes to software that solves real constraints.</p></div>
-        <div class="filters" role="group" aria-label="Filter projects"><button type="button" class="active" data-filter="all" aria-pressed="true">All team projects <sup>7</sup></button><button type="button" data-filter="hardware" aria-pressed="false">Hardware &amp; embedded</button><button type="button" data-filter="software" aria-pressed="false">Software &amp; AI</button><a class="filter-tab-link" href="#self-projects">Self-projects <span>↘</span></a></div>
-        <p class="sr-only" role="status" id="filter-status">Showing all 7 team projects.</p>
-        <div class="project-grid" id="project-grid">
-          <article class="project project-featured reveal" data-category="hardware software">
-            <button type="button" class="project-visual attire-visual" data-project="attire" aria-label="Read about the Dual-Pi Attire Check System"><img src="assets/attire-still.png" alt="Actual attire detection demo from the Dual-Pi project repository" width="600" height="338" loading="lazy"><span class="project-open" aria-hidden="true">↗</span></button>
-            <div class="project-info"><div class="project-meta">EDGE AI / COMPUTER VISION</div><h3><button type="button" data-project="attire">A smarter lab entrance.</button></h3><p>Dual-Pi attire checks, real-time visual feedback, and distributed image processing.</p><div class="project-tech">Raspberry Pi 5 <span>/</span> YOLOv8 <span>/</span> PyQt6</div></div>
-          </article>
-          <article class="project project-pliz reveal" data-category="software">
-            <button type="button" class="project-visual pliz-visual" data-project="pliz" aria-label="Read about PLiZ railway maintenance planner"><img src="assets/pliz-overview.png" alt="PLiZ railway maintenance planning workspace overview" width="1440" height="900" loading="lazy"><span class="project-open" aria-hidden="true">↗</span></button>
-            <div class="project-info"><div class="project-meta">SOFTWARE / HACKATHON</div><h3><button type="button" data-project="pliz">PLiZ. Planning, simplified.</button></h3><p>Railway maintenance scheduling that adapts when access and crew availability change.</p><div class="project-tech">Python <span>/</span> FastAPI <span>/</span> React</div></div>
-          </article>
-          <article class="project project-mailbox reveal" data-category="hardware">
-            <button type="button" class="type-visual mailbox-visual" data-project="mailbox" aria-label="Read about the Smart Mailbox"><span class="visual-small">MSP430 + ESP32 + ARDUINO</span><span class="mailbox-type">You've<br>got <em>mail.</em></span><span class="visual-bottom">SMART MAILBOX <span>IN PROGRESS</span></span><span class="project-open" aria-hidden="true">↗</span></button>
-            <div class="project-info"><div class="project-meta">EMBEDDED SYSTEMS / IOT</div><h3><button type="button" data-project="mailbox">Connected at the doorstep.</button></h3><p>A multi-MCU mailbox combining parcel sensors, low-power control, and Wi-Fi notifications.</p><div class="project-tech">MSP430 <span>/</span> ESP32 <span>/</span> UART</div></div>
-          </article>
-          <article class="project project-route reveal" data-category="software">
-            <button type="button" class="type-visual route-visual" data-project="route" aria-label="Read about the C++ Shuttle Scheduler"><span class="visual-small">C++ / OBJECT-ORIENTED DESIGN</span><span class="route-type">A to B.<br><span>On time.</span></span><span class="route-line" aria-hidden="true">A <i></i> B</span><span class="project-open" aria-hidden="true">↗</span></button>
-            <div class="project-info"><div class="project-meta">SOFTWARE ENGINEERING / C++</div><h3><button type="button" data-project="route">Every passenger. A plan.</button></h3><p>Route-aware shuttle dispatch with capacity limits and a strict 10-minute arrival window.</p><div class="project-tech">C++17 <span>/</span> SOLID <span>/</span> Design patterns</div></div>
-          </article>
-          <article class="project project-compact reveal" data-category="hardware"><button class="compact-project" type="button" data-project="fpga"><span class="compact-icon" aria-hidden="true">[01]</span><div><span class="project-meta">DIGITAL SYSTEMS</span><h3>Logic, on hardware.</h3><p>FPGA traffic controller using VHDL and a deterministic state machine.</p><span class="project-tech">Basys 3 / Vivado / VHDL</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
-          <article class="project project-compact reveal" data-category="software"><button class="compact-project" type="button" data-project="telematics"><span class="compact-icon" aria-hidden="true">~↗</span><div><span class="project-meta">MACHINE LEARNING · IN PROGRESS</span><h3>Reading the road.</h3><p>A telematics pipeline exploring driving behaviours and incident risk.</p><span class="project-tech">Python / scikit-learn / Docker</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
-          <article class="project project-compact project-fitz reveal" data-category="software"><button class="compact-project" type="button" data-project="fitz"><span class="compact-icon fitz-mark" aria-hidden="true">F<span>i</span>tZ</span><div><span class="project-meta">AI APPLICATION / HACKATHON</span><h3>A wardrobe with a plan.</h3><p>FitZ, an AI-powered digital wardrobe and automated outfit planner.</p><span class="project-tech">Agnes AI APIs / Team project</span></div><span class="compact-arrow" aria-hidden="true">↗</span></button></article>
+        <div class="hero-orb-wrap hero-orb-wrap-two" aria-hidden="true">
+          <div class="hero-orb hero-orb-two"></div>
         </div>
-      </section>
 
-      <section class="recognition section" aria-labelledby="recognition-heading">
-        <h2 id="recognition-heading" class="reveal">Built together.<br><em>Recognised together.</em></h2>
-        <div class="awards">
-          <div class="award-card reveal">
-            <div class="award">
-              <span class="place">1<span>st</span></span>
-              <div>
-                <h3>Agnes AI Hackathon</h3>
-                <p>FitZ / Five-person team</p>
-                <span>JUNE 2026</span>
-              </div>
-              <span class="award-symbol" aria-hidden="true">✳</span>
-            </div>
-            <div class="award-gallery">
-              <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Agnes AI Hackathon 1st Place Team award presentation">
-                <img src="assets/hackathon-agnes-1st-place.jpg" alt="FitZ team holding 1st Place certificates and $500 prize at the Agnes AI Hackathon @ SMU" loading="lazy">
-                <figcaption>1st Place Team Presentation ($500)</figcaption>
-              </figure>
-              <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: FitZ team celebration at winner announcement">
-                <img src="assets/hackathon-agnes-team-selfie.jpg" alt="FitZ team smiling in front of the announcement screen showing 1st place award" loading="lazy">
-                <figcaption>FitZ celebration at announcement screen</figcaption>
-              </figure>
+        <div class="new-shell hero-grid">
+          <p class="hero-note">// BASED IN SINGAPORE · SIT COMPUTER ENGINEERING</p>
+
+          <div class="hero-copy">
+            <h1 id="hero-title">Izz<br/><span>Faris</span></h1>
+            <p class="hero-role">Bridging low-level hardware and applied software intelligence. Building deterministic systems from bare silicon to the application layer.</p>
+            <div class="hero-actions">
+              <a href="assets/Izz_Faris_Resume.pdf" download="Izz_Faris_Resume.pdf" target="_blank" rel="noopener noreferrer" class="hero-btn-primary" aria-label="Download Resume">
+                <span>Download Resume</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true"><path d="M216.49,79.52l-56-56A12,12,0,0,0,152,20H56A20,20,0,0,0,36,40V216a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V88A12,12,0,0,0,216.49,79.52ZM160,57l23,23H160ZM60,212V44h76V92a12,12,0,0,0,12,12h48V212Zm100.49-60.49a12,12,0,0,1,0,17l-24,24a12,12,0,0,1-17,0l-24-24a12,12,0,0,1,17-17L116,155V124a12,12,0,0,1,24,0v31l3.51-3.52A12,12,0,0,1,160.49,151.51Z"></path></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/izz-faris-ceg" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true"><path d="M216,20H40A20,20,0,0,0,20,40V216a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V40A20,20,0,0,0,216,20Zm-4,192H44V44H212ZM112,176V120a12,12,0,0,1,21.43-7.41A40,40,0,0,1,192,148v28a12,12,0,0,1-24,0V148a16,16,0,0,0-32,0v28a12,12,0,0,1-24,0ZM96,120v56a12,12,0,0,1-24,0V120a12,12,0,0,1,24,0ZM68,80A16,16,0,1,1,84,96,16,16,0,0,1,68,80Z"></path></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/izzfaris14" target="_blank" rel="noopener noreferrer" class="hero-btn-secondary" aria-label="GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true"><path d="M212.62,75.17A63.7,63.7,0,0,0,206.39,26,12,12,0,0,0,196,20a63.71,63.71,0,0,0-50,24H126A63.71,63.71,0,0,0,76,20a12,12,0,0,0-10.39,6,63.7,63.7,0,0,0-6.23,49.17A61.5,61.5,0,0,0,52,104v8a60.1,60.1,0,0,0,45.76,58.28A43.66,43.66,0,0,0,92,192v4H76a20,20,0,0,1-20-20,44.05,44.05,0,0,0-44-44,12,12,0,0,0,0,24,20,20,0,0,1,20,20,44.05,44.05,0,0,0,44,44H92v12a12,12,0,0,0,24,0V192a20,20,0,0,1,40,0v40a12,12,0,0,0,24,0V192a43.66,43.66,0,0,0-5.76-21.72A60.1,60.1,0,0,0,220,112v-8A61.5,61.5,0,0,0,212.62,75.17ZM196,112a36,36,0,0,1-36,36H112a36,36,0,0,1-36-36v-8a37.87,37.87,0,0,1,6.13-20.12,11.65,11.65,0,0,0,1.58-11.49,39.9,39.9,0,0,1-.4-27.72,39.87,39.87,0,0,1,26.41,17.8A12,12,0,0,0,119.82,68h32.35a12,12,0,0,0,10.11-5.53,39.84,39.84,0,0,1,26.41-17.8,39.9,39.9,0,0,1-.4,27.72,12,12,0,0,0,1.61,11.53A37.85,37.85,0,0,1,196,104Z"></path></svg>
+                <span>GitHub</span>
+              </a>
             </div>
           </div>
-          <div class="award-card reveal">
-            <div class="award">
-              <span class="place">2<span>nd</span></span>
-              <div>
-                <h3>Nebula X Hackathon</h3>
-                <p>PLiZ / LTA @ NUS / Five-person team</p>
-                <span>SEPTEMBER 2026</span>
-              </div>
-              <span class="award-symbol" aria-hidden="true">✳</span>
-            </div>
-            <div class="award-gallery">
-              <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Nebula X Hackathon 2nd Place Team award on stage">
-                <img src="assets/hackathon-nebulax-pliz-2nd.jpg" alt="PLiZ team holding 2nd Place Certificate of Achievement on stage at Nebula X Hackathon" loading="lazy">
-                <figcaption>2nd Place Award on Stage (PLiZ)</figcaption>
-              </figure>
-              <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: PLiZ team and organizers celebrating on stage">
-                <img src="assets/hackathon-nebulax-stage-celebration.jpg" alt="PLiZ team with organizers and judges on stage celebrating 2nd place achievement" loading="lazy">
-                <figcaption>Team &amp; judges stage celebration</figcaption>
-              </figure>
-            </div>
+
+          <div class="hero-bottom">
+            <a href="#about" class="hero-scroll-link">
+              <span>Scroll to enter</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true"><path d="M200,88V192a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h84.69L58.34,69.66A8,8,0,0,1,69.66,58.34L184,172.69V88a8,8,0,0,1,16,0Z"></path></svg>
+            </a>
+            <span class="hero-index">01 / 05</span>
           </div>
         </div>
       </section>
 
-      <section class="self-projects section" id="self-projects" aria-labelledby="self-projects-heading">
-        <div class="self-header reveal">
-          <div class="self-badge">INDEPENDENT BUILDS · LAB &amp; WORKBENCH</div>
-          <h2 id="self-projects-heading">Driven by <em>curiosity.</em></h2>
-          <p>Personal engineering explorations, custom hardware setups, and self-directed experiments built outside the curriculum. A dedicated space for independent builds, with more in progress.</p>
+      <!-- 2. EDITORIAL STATEMENT SECTION (DYNAMIC FLOATING ICONS - NO FULL STOP) -->
+      <section id="about" class="statement-section">
+        <div class="new-shell">
+          <p class="section-meta">// ENGINEERING FROM THE BARE METAL UP</p>
+          <h1 class="statement-title">From <span class="text-accent">pins</span> <span class="dynamic-icon icon-chip" aria-label="Microchip logic icon"><svg class="svg-inline-chip" width="0.68em" height="0.68em" viewBox="0 0 26 26" fill="none"><rect x="5" y="5" width="16" height="16" rx="2" stroke="var(--emerald)" stroke-width="1.8" fill="rgba(16, 185, 129, 0.15)"></rect><circle class="chip-core-pulse" cx="13" cy="13" r="3.2" fill="var(--emerald)"></circle><line x1="9" y1="1.5" x2="9" y2="5" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="13" y1="1.5" x2="13" y2="5" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="17" y1="1.5" x2="17" y2="5" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="9" y1="21" x2="9" y2="24.5" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="13" y1="21" x2="13" y2="24.5" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="17" y1="21" x2="17" y2="24.5" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="1.5" y1="9" x2="5" y2="9" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="1.5" y1="13" x2="5" y2="13" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="1.5" y1="17" x2="5" y2="17" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="21" y1="9" x2="24.5" y2="9" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="21" y1="13" x2="24.5" y2="13" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line><line x1="21" y1="17" x2="24.5" y2="17" stroke="var(--emerald)" stroke-width="1.5" stroke-linecap="round"></line></svg></span><br/>to <span class="text-accent">pixels</span> <span class="dynamic-icon icon-terminal" aria-label="Terminal application icon"><svg class="svg-inline-window" width="0.75em" height="0.58em" viewBox="0 0 28 20" fill="none"><rect x="1.5" y="1.5" width="25" height="17" rx="3.5" stroke="currentColor" stroke-width="1.8"></rect><line x1="1.5" y1="6.5" x2="26.5" y2="6.5" stroke="currentColor" stroke-width="1.2"></line><circle cx="5" cy="4" r="1.2" fill="currentColor"></circle><circle cx="8.5" cy="4" r="1.2" fill="currentColor"></circle><circle cx="12" cy="4" r="1.2" fill="currentColor"></circle><line class="svg-code-line-1" x1="5" y1="10.5" x2="16" y2="10.5" stroke="var(--emerald)" stroke-width="1.6" stroke-linecap="round"></line><line class="svg-code-line-2" x1="5" y1="14.5" x2="12" y2="14.5" stroke="var(--emerald)" stroke-width="1.6" stroke-linecap="round"></line></svg></span></h1>
+          <div class="statement-detail">
+            <p>I design embedded firmware, responsive edge vision, and autonomous dispatch logic. Different resources, one discipline. Make complex systems run predictably.</p>
+            <span>2026 / SELECTED PRACTICE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. SELECTED WORK: SYSTEMS IN PRACTICE (HORIZONTAL SCROLL CAROUSEL) -->
+      <section id="projects" class="projects-stage" aria-labelledby="work-title">
+        <div class="project-stage-head new-shell">
+          <div class="stage-head-left">
+            <span class="section-kicker">// 01 · SELECTED WORK</span>
+            <h2 id="work-title">Systems<br/>in Practice<span>.</span></h2>
+            <p class="section-tagline">Core systems and hardware foundations.</p>
+          </div>
+          <div class="stage-head-controls">
+            <span class="stage-counter">01 — 05</span>
+            <div class="carousel-nav-buttons">
+              <button type="button" class="carousel-nav-btn carousel-prev-btn" aria-label="Previous project" title="Previous project">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+              </button>
+              <button type="button" class="carousel-nav-btn carousel-next-btn" aria-label="Next project" title="Next project">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="self-showcase" id="self-grid">
-          <article class="self-card self-card-featured reveal" data-category="hardware">
-            <button type="button" class="self-visual pc-visual" data-project="custompc" aria-label="Read about Custom Rig Architecture and Thermal Dynamics">
-              <div class="pc-terminal-header">
-                <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
-                <span class="term-title">hardware_lab // custom_rig_thermals.sys</span>
-                <span class="term-badge">BENCHMARKED</span>
+        <div class="project-rail" id="project-rail">
+          <!-- Card 1: EdgeVision Access Sentinel -->
+          <article class="project-panel">
+            <button type="button" class="project-visual-btn" data-project="attire" aria-label="View EdgeVision Access Sentinel details">
+              <div class="visual-img-container">
+                <img src="assets/attire-still.png" alt="EdgeVision Access Sentinel YOLOv8 detection demo on Raspberry Pi 5" loading="lazy">
               </div>
-              <div class="pc-terminal-body">
-                <div class="pc-spec-line"><span class="spec-label">ARCHITECTURE</span><span class="spec-val">Mid-Tower / High Static Pressure Airflow</span></div>
-                <div class="pc-spec-line"><span class="spec-label">THERMAL MODEL</span><span class="spec-val">Positive Static Pressure / Tuned Intake Curves</span></div>
-                <div class="pc-spec-line"><span class="spec-label">POWER DELIVERY</span><span class="spec-val">Multi-Phase VRM / LLC Voltage Stability</span></div>
-                <div class="pc-spec-line"><span class="spec-label">MEMORY TUNING</span><span class="spec-val">Sub-Timing Compression / Sustained Compute Stress</span></div>
+              <div class="project-number">01</div>
+              <div class="project-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"></path></svg>
               </div>
-              <span class="project-open" aria-hidden="true">↗</span>
             </button>
-            <div class="self-card-info">
-              <div class="self-card-meta">FEATURED LAB BUILD · HARDWARE &amp; THERMALS</div>
-              <h3><button type="button" data-project="custompc">Custom Rig Architecture &amp; Thermal Engineering</button></h3>
-              <p>A hands-on deep dive into PC hardware assembly, thermal airflow dynamics, motherboard VRM load balancing, and BIOS-level memory timing optimization. Stress-benchmarked for maximum stability under sustained compute workloads.</p>
-              <div class="self-card-tech">Static pressure thermals <span>/</span> BIOS power curves <span>/</span> Hardware assembly</div>
+            <div class="project-caption">
+              <div class="caption-head">
+                <span class="project-cat-badge">EDGE AI &amp; EMBEDDED LINUX</span>
+                <h3>EdgeVision Access Sentinel</h3>
+              </div>
+              <p class="project-subtitle">Distributed dual-node access control station on Raspberry Pi 5.</p>
+              <p class="project-highlights">Real-time YOLOv8 lab PPE compliance, multi-threaded PyQt6 UI, 94% mAP, zero-loss EXIF metadata logging via localized Flask backend.</p>
+              <div class="project-tags">
+                <span>Raspberry Pi 5</span><span>YOLOv8</span><span>PyQt6</span><span>OpenCV</span><span>Flask</span>
+              </div>
             </div>
           </article>
+
+          <!-- Card 2: PLiZ Railway Workspace -->
+          <article class="project-panel">
+            <button type="button" class="project-visual-btn" data-project="pliz" aria-label="View PLiZ Railway Workspace details">
+              <div class="visual-img-container">
+                <img src="assets/pliz-overview.png" alt="PLiZ Railway maintenance workspace UI overview" loading="lazy">
+              </div>
+              <div class="project-number">02</div>
+              <div class="project-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"></path></svg>
+              </div>
+            </button>
+            <div class="project-caption">
+              <div class="caption-head">
+                <span class="project-cat-badge">AUTONOMOUS OPERATIONS</span>
+                <h3>PLiZ Railway Workspace</h3>
+              </div>
+              <p class="project-subtitle">🥈 2nd Place out of 240+ national teams (LTA / NUS Nebula X Hackathon).</p>
+              <p class="project-highlights">Automated nocturnal railway maintenance scheduler dynamically resolving track-access conflicts and crew assignments using FastAPI and React.</p>
+              <div class="project-tags">
+                <span>FastAPI</span><span>React</span><span>Python</span><span>Automated Pytest Suites</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: FitZ AI Digital Wardrobe -->
+          <article class="project-panel">
+            <button type="button" class="project-visual-btn" data-project="fitz" aria-label="View FitZ AI Digital Wardrobe details">
+              <div class="visual-img-container">
+                <img src="assets/hackathon-agnes-1st-place.jpg" alt="FitZ team awarded 1st Place at Agnes AI Hackathon" loading="lazy">
+              </div>
+              <div class="project-number">03</div>
+              <div class="project-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"></path></svg>
+              </div>
+            </button>
+            <div class="project-caption">
+              <div class="caption-head">
+                <span class="project-cat-badge">MULTIMODAL AI &amp; CV</span>
+                <h3>FitZ AI Digital Wardrobe</h3>
+              </div>
+              <p class="project-subtitle">🥇 1st Place Champion out of 37+ teams (Agnes AI Hackathon @ SMU).</p>
+              <p class="project-highlights">Multimodal digital wardrobe and outfit curation system integrating Agnes AI APIs to eliminate daily decision fatigue and encourage sustainable fashion.</p>
+              <div class="project-tags">
+                <span>Agnes AI API</span><span>Python</span><span>FastAPI</span><span>React</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Driverless Transit Dispatcher -->
+          <article class="project-panel">
+            <button type="button" class="project-visual-btn schematic-visual-btn" data-project="route" aria-label="View Driverless Transit Dispatcher details">
+              <div class="schematic-screen">
+                <span class="schematic-term-head">&gt; ./transit_dispatcher --strict-timing</span>
+                <span class="schematic-term-title">A to B.<br><em>On time.</em></span>
+                <span class="schematic-term-foot">[IN-MEMORY RAM DISPATCH · 10-MIN ARRIVAL WINDOW]</span>
+              </div>
+              <div class="project-number">04</div>
+              <div class="project-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256"><path d="M198,64V168a6,6,0,0,1-12,0V78.48L68.24,196.24a6,6,0,0,1-8.48-8.48L177.52,70H88a6,6,0,0,1,0-12H192A6,6,0,0,1,198,64Z"></path></svg>
+              </div>
+            </button>
+            <div class="project-caption">
+              <div class="caption-head">
+                <span class="project-cat-badge">LOW-LEVEL SYSTEMS</span>
+                <h3>Driverless Transit Dispatcher</h3>
+              </div>
+              <p class="project-subtitle">Autonomous public transit simulator in Modern C++17.</p>
+              <p class="project-highlights">Layered architecture built strictly on SOLID principles, Strategy/Factory patterns, defensive regex sanitization, and in-RAM timetable execution.</p>
+              <div class="project-tags">
+                <span>Modern C++17</span><span>OOP &amp; SOLID</span><span>In-Memory RAM</span><span>Regex Engine</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5th Card: Link to Dedicated Engineering Archive (projects.html) -->
+          <article class="project-panel panel-explore-all">
+            <a href="projects.html" class="explore-all-card" aria-label="Explore all projects in the engineering archive">
+              <div class="explore-inner">
+                <span class="explore-kicker">// COMPLETE CATALOG · 7 PROJECTS</span>
+                <h3 class="explore-title">Explore all<br/><span>projects.</span></h3>
+                <p class="explore-desc">An expanding record of hardware prototypes, embedded firmware, edge intelligence, and software systems.</p>
+                <div class="explore-cta-circle">
+                  <span>Open Archive</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+                </div>
+              </div>
+            </a>
+          </article>
         </div>
+      </section>
 
-        <!-- APPLE-INSPIRED BACKDROP PROTOTYPING TEASER -->
-        <div class="apple-backdrop-stage reveal" aria-labelledby="apple-stage-headline">
-          <div class="apple-watermark-text" aria-hidden="true">ALWAYS BUILDING</div>
-          
-          <div class="apple-stage-body">
-            <span class="apple-eyebrow">Active Workbench</span>
-            <h3 id="apple-stage-headline" class="apple-headline">
-              Always building.<br>
-              <em>Never standing still.</em>
-            </h3>
-            <p class="apple-lead">
-              Engineering doesn’t pause when a project wraps. I’m continually experimenting at the desk—breadboarding multi-sensor nodes, laying out custom PCBs, and compiling low-power firmware. If there’s an interesting problem, a prototype is already in the works.
-            </p>
+      <!-- 4. TECHNICAL PRIMITIVES (TECH STACK GRID - ANVV / USES STYLE) -->
+      <section class="primitives-section" id="stack" aria-labelledby="primitives-heading">
+        <div class="new-shell">
+          <div class="primitives-header">
+            <div class="primitives-eyebrow">// SYSTEM TOOLING</div>
+            <h2 id="primitives-heading" class="primitives-title">Technical<br/><span>Primitives.</span></h2>
+            <p class="primitives-subtitle">Core runtimes, hardware targets, low-level protocols, and analytical toolchains.</p>
+          </div>
 
-            <div class="apple-bottom-punchline">
-              <p class="punchline-text">
-                New builds dropping soon.<br>
-                <span>Schematics, code repos &amp; build logs actively in development.</span>
-              </p>
-              <div class="apple-live-status">
-                <span class="live-dot"></span>
-                <span>Active Workbench · Hardware in the Pipeline</span>
+          <div class="primitives-grid">
+            <!-- 1. C / C++ -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M72,128a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,128Zm120-8H176V104a8,8,0,0,0-16,0v16H144a8,8,0,0,0,0,16h16v16a8,8,0,0,0,16,0V136h16a8,8,0,0,0,0-16Zm48,0H224V104a8,8,0,0,0-16,0v16H192a8,8,0,0,0,0,16h16v16a8,8,0,0,0,16,0V136h16a8,8,0,0,0,0-16Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">C / C++</span>
+                <span class="primitive-tag">EMBEDDED &amp; SYSTEMS</span>
+              </div>
+            </div>
+
+            <!-- 2. Python -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M216,88V40a16,16,0,0,0-16-16H104a16,16,0,0,0-16,16V56H48A16,16,0,0,0,32,72v80a16,16,0,0,0,16,16H72v24a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V168h16a16,16,0,0,0,16-16V104A16,16,0,0,0,216,88ZM104,40H200V88H136a16,16,0,0,0-16,16v40H88V40ZM48,72H72v80a16,16,0,0,0,16,16h40v24H88V168H48ZM208,152H136V104h64v48h8Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">Python</span>
+                <span class="primitive-tag">PIPELINES &amp; ML</span>
+              </div>
+            </div>
+
+            <!-- 3. Raspberry Pi 5 -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,128a24,24,0,1,1,24,24A24,24,0,0,1,72,128Zm112,56H72a8,8,0,0,1,0-16H184a8,8,0,0,1,0,16Zm0-88a24,24,0,1,1,24-24A24,24,0,0,1,184,96Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">Raspberry Pi 5</span>
+                <span class="primitive-tag">EDGE COMPUTING</span>
+              </div>
+            </div>
+
+            <!-- 4. TI MSP430 / ESP32 -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M208,80V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56V80H32a8,8,0,0,0,0,16H48v64H32a8,8,0,0,0,0,16H48v24a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V176h16a8,8,0,0,0,0-16H208V96h16a8,8,0,0,0,0-16ZM64,56H192V80H64Zm128,144H64V176H192Zm0-40H64V96H192Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">TI MSP430 / ESP32</span>
+                <span class="primitive-tag">MICROCONTROLLERS</span>
+              </div>
+            </div>
+
+            <!-- 5. Basys 3 FPGA -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM112,88a16,16,0,1,1-16-16A16,16,0,0,1,112,88Zm64,0a16,16,0,1,1-16-16A16,16,0,0,1,176,88Zm-64,80a16,16,0,1,1-16-16A16,16,0,0,1,112,168Zm64,0a16,16,0,1,1-16-16A16,16,0,0,1,176,168Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">Basys 3 FPGA</span>
+                <span class="primitive-tag">DIGITAL LOGIC / VHDL</span>
+              </div>
+            </div>
+
+            <!-- 6. YOLOv8 & OpenCV -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">YOLOv8 &amp; OpenCV</span>
+                <span class="primitive-tag">COMPUTER VISION</span>
+              </div>
+            </div>
+
+            <!-- 7. PyTorch & Scikit-Learn -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM128,192a64,64,0,1,1,64-64A64.07,64.07,0,0,1,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">PyTorch &amp; Scikit-Learn</span>
+                <span class="primitive-tag">MACHINE LEARNING</span>
+              </div>
+            </div>
+
+            <!-- 8. Docker -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M224,96H192V64a8,8,0,0,0-8-8H160a8,8,0,0,0-8,8V96H120V64a8,8,0,0,0-8-8H88a8,8,0,0,0-8,8V96H40a16,16,0,0,0-16,16v80a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V104A8,8,0,0,0,224,96ZM40,112H80v48H40Zm56,0h48v48H96Zm64,0h48v48H160Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">Docker</span>
+                <span class="primitive-tag">CONTAINERIZATION</span>
+              </div>
+            </div>
+
+            <!-- 9. UART / SPI / I2C -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M232,128a8,8,0,0,1-8,8H176v40a8,8,0,0,1-16,0V136H96v40a8,8,0,0,1-16,0V136H32a8,8,0,0,1,0-16H80V80a8,8,0,0,1,16,0v40h64V80a8,8,0,0,1,16,0v40h48A8,8,0,0,1,232,128Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">UART / SPI / I2C</span>
+                <span class="primitive-tag">HARDWARE PROTOCOLS</span>
+              </div>
+            </div>
+
+            <!-- 10. SQLite / MariaDB -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,0,0,24,128c0,42.74,26.47,79.8,64,95.51V232a8,8,0,0,0,16,0v-5.23a104.76,104.76,0,0,0,48,0V232a8,8,0,0,0,16,0v-8.49c37.53-15.71,64-52.77,64-95.51A104,104,0,0,0,128,24Zm0,176c-39.7,0-72-32.3-72-72s32.3-72,72-72,72,32.3,72,72S167.7,200,128,200Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">SQLite / MariaDB</span>
+                <span class="primitive-tag">RELATIONAL DATA</span>
+              </div>
+            </div>
+
+            <!-- 11. Git & GitHub -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M216,104a32.06,32.06,0,0,0-31.55,27H144V85a32,32,0,1,0-16,0v46H71.55a32,32,0,1,0,0,16H128v46a32,32,0,1,0,16,0V147h40.45A32.06,32.06,0,1,0,216,104ZM56,152a16,16,0,1,1,16-16A16,16,0,0,1,56,152ZM136,56a16,16,0,1,1-16,16A16,16,0,0,1,136,56Zm0,144a16,16,0,1,1-16-16A16,16,0,0,1,136,200Zm80-64a16,16,0,1,1,16-16A16,16,0,0,1,216,136Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">Git &amp; GitHub</span>
+                <span class="primitive-tag">VERSION CONTROL</span>
+              </div>
+            </div>
+
+            <!-- 12. VS Code / CCS -->
+            <div class="primitive-card reveal">
+              <div class="primitive-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M228.37,79.52l-56-56A12,12,0,0,0,152,20H56A20,20,0,0,0,36,40V216a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V88A12,12,0,0,0,228.37,79.52ZM160,57l23,23H160ZM60,212V44h76V92a12,12,0,0,0,12,12h48V212Z"></path></svg>
+              </div>
+              <div class="primitive-info">
+                <span class="primitive-name">VS Code / CCS</span>
+                <span class="primitive-tag">DEVELOPER TOOLING</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="beyond section" id="beyond" aria-labelledby="beyond-heading">
-        <div class="beyond-header reveal">
-          <div class="beyond-badge">LEADERSHIP &amp; COMMUNITY · SIDE QUESTS</div>
-          <h2 id="beyond-heading">Beyond the <em>terminal.</em></h2>
-          <p>Engineering isn't lived in isolation behind a terminal. It's forged in high-stakes operational turnouts, late-night camp logistics, and giving back to the next generation.</p>
-        </div>
-        <div class="beyond-grid">
-          <article class="beyond-card beyond-card-main reveal">
-            <div class="beyond-visual-wrap interactive" tabindex="0" role="button" aria-label="View photo: SIT FYE Helix Cirrus 15">
-              <img src="assets/helix-heart-pose.jpg" alt="Facilitators and freshmen making heart gestures at SIT HELIX FYE" class="beyond-img" loading="lazy">
-              <div class="beyond-tag">SIT FYE HELIX · CIRRUS 15 (C15)</div>
-            </div>
-            <div class="beyond-card-body">
-              <div class="beyond-role-meta">FIRST YEAR EXPERIENCE · FACILITATOR</div>
-              <h3>Welcoming the Next Wave of SITizens</h3>
-              <p class="beyond-lead">Three months of late-night prep, zero sleep, and one mission: make sure no incoming freshman felt alone stepping into SIT.</p>
-              <p>We didn't just run icebreakers—we built Cirrus 15 into a genuine family. From roaring cheers echoing across the sports hall to late-night debriefs, we pushed shy juniors out of their shells and watched them find their voice. The real testament? Months after orientation wrapped, this crew is still hanging out, cracking jokes, and backing each other up through the university grind.</p>
-              <div class="beyond-stats">
-                <div class="beyond-stat"><strong>Cirrus 15 (C15)</strong><span>Sub-Alliance</span></div>
-                <div class="beyond-stat"><strong>3 Months Prep</strong><span>Culture &amp; Energy</span></div>
-                <div class="beyond-stat"><strong>Lasting Bonds</strong><span>SITizen DNA</span></div>
-              </div>
-            </div>
-          </article>
-          <div class="beyond-gallery reveal">
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: The Cirrus family in full force">
-              <img src="assets/helix-cirrus-large-group.jpg" alt="Cirrus alliance facilitators and students in pinstripe jerseys" loading="lazy">
-              <figcaption>The Cirrus family in full force</figcaption>
-            </figure>
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Cirrus 15 co-facilitator trio">
-              <img src="assets/helix-trio-cirrus15.jpg" alt="Izz and co-facilitators holding the Cirrus 15 sign" loading="lazy">
-              <figcaption>Cirrus 15 co-facilitator trio</figcaption>
-            </figure>
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Cirrus with Ottie the Otter">
-              <img src="assets/helix-hall-group.jpg" alt="Group photo with the SIT Otter mascot" loading="lazy">
-              <figcaption>Cirrus with Ottie the Otter, SIT's mascot</figcaption>
-            </figure>
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Orientation energy at the hall">
-              <img src="assets/helix-mascot-otter.jpg" alt="Cirrus team gathering in the sports hall" loading="lazy">
-              <figcaption>Orientation energy at the hall</figcaption>
-            </figure>
+      <!-- 5. CAPABILITIES MATRIX (5 NUMBERED COMPETENCY CARDS) -->
+      <section class="capabilities-section" id="skills" aria-labelledby="skills-heading">
+        <div class="new-shell">
+          <div class="capabilities-intro">
+            <p class="section-label">Capabilities</p>
+            <h2 id="skills-heading">Core systems<br/>with a sharp<br/><span>hardware edge.</span></h2>
           </div>
-        </div>
-
-        <div class="beyond-grid beyond-grid-scdf">
-          <article class="beyond-card beyond-card-main reveal">
-            <div class="beyond-visual-wrap interactive" tabindex="0" role="button" aria-label="View photo: Station 441 Fire &amp; Rescue Response platoon">
-              <img src="assets/scdf-station-platoon.jpg" alt="Station 441 Fire &amp; Rescue Response platoon in bunker gear and helmets in front of the fire engine" class="beyond-img" loading="lazy">
-              <div class="beyond-tag">STATION 441 · FIRE &amp; RESCUE RESPONSE</div>
-            </div>
-            <div class="beyond-card-body">
-              <div class="beyond-role-meta">NATIONAL SERVICE · 2023 – 2025</div>
-              <h3>Frontline Composure. Zero Margin for Error.</h3>
-              <p class="beyond-lead">Bunker gear soaked in sweat, sirens cutting through the night, and high-heat turnouts where second-guessing gets people hurt.</p>
-              <p>Station 441 drilled one reflex into my DNA: stay composed, communicate with absolute clarity, and isolate problems under pressure. We took that discipline straight to national stages—cutting through crushed wreckage and deploying robotics live before tens of thousands at <strong>NDP 2024 (TD40)</strong>, then holding trackside standby as <strong>Formula 1</strong> cars screamed past at 300 km/h, primed for high-speed fire containment in seconds.</p>
-              <div class="beyond-stats">
-                <div class="beyond-stat"><strong>Station 441</strong><span>Operational Turnout</span></div>
-                <div class="beyond-stat"><strong>NDP 2024 TD40</strong><span>Dynamic Defence Display</span></div>
-                <div class="beyond-stat"><strong>F1 Grand Prix</strong><span>Trackside Standby</span></div>
+          <div class="capability-list">
+            <div class="capability-item reveal">
+              <span>01</span>
+              <div class="cap-info">
+                <strong>Embedded Firmware &amp; Microcontrollers</strong>
+                <p>Bare-metal C/C++, MSP430, ESP32, UART/SPI/I2C protocols, interrupt routines (ISRs), and low-power modes.</p>
               </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
             </div>
-          </article>
-          <div class="beyond-gallery reveal">
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: NDP 2024 Dynamic Defence Display">
-              <img src="assets/scdf-ndp-dynamic-display.jpg" alt="SCDF tactical vehicles, DART rescue, and firefighting robotics at NDP 2024 Padang" loading="lazy">
-              <figcaption>NDP 2024 Dynamic Defence Display (Padang)</figcaption>
-            </figure>
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Tactical vehicle egress &amp; response drill">
-              <img src="assets/scdf-ndp-lf-response.jpg" alt="Firefighter in bunker gear deploying from SCDF tactical response vehicle at NDP 59" loading="lazy">
-              <figcaption>Tactical response &amp; vehicle rescue drill</figcaption>
-            </figure>
-            <figure class="gallery-item gallery-item-wide" tabindex="0" role="button" aria-label="View photo: Trackside night operations standby at Marina Bay">
-              <img src="assets/scdf-f1-night-standby.jpg" alt="SCDF operational deployment crew on night standby against Marina Bay skyline during F1 Grand Prix deployment" loading="lazy">
-              <figcaption>Trackside night operations standby at Marina Bay</figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <!-- MENDAKI CLUB YOUTH MENTOR SEGMENT -->
-        <div class="beyond-grid beyond-grid-mendaki">
-          <article class="beyond-card beyond-card-main reveal">
-            <div class="beyond-visual-wrap interactive" tabindex="0" role="button" aria-label="View photo: MENDAKI PEER Community Programme 2025 cohort">
-              <img src="assets/mendaki-peer-cohort.jpg" alt="Izz Faris with fellow mentors and secondary school youths at the MENDAKI PEER Community Programme 2025" class="beyond-img" loading="lazy">
-              <div class="beyond-tag">MENDAKI · PEER COMMUNITY PROGRAMME 2025</div>
-            </div>
-            <div class="beyond-card-body">
-              <div class="beyond-role-meta">YOUTH MENTORSHIP &amp; ADVOCACY · 2025</div>
-              <h3>No-Fluff Mentorship. Showing Up for Youths.</h3>
-              <p class="beyond-lead">Mentorship isn't about giving stiff lectures from a stage—it’s about showing up, listening without judging, and reminding kids they belong.</p>
-              <p>With MENDAKI's PEER programme, we took secondary school youths through gritty team trails to build real grit and self-belief. In our GoTech workshops, we put laptops, microcontrollers, and robotics directly in their hands. Watching a kid who swore "engineering isn't for me" suddenly light up when their custom circuit whirs to life—that’s the whole reason I mentor.</p>
-              <div class="beyond-stats">
-                <div class="beyond-stat"><strong>PEER Programme</strong><span>Cohort Mentorship</span></div>
-                <div class="beyond-stat"><strong>GoTech Series</strong><span>Robotics &amp; STEM</span></div>
-                <div class="beyond-stat"><strong>Real Grit</strong><span>Community Impact</span></div>
+            <div class="capability-item reveal">
+              <span>02</span>
+              <div class="cap-info">
+                <strong>Edge AI &amp; Computer Vision</strong>
+                <p>Ultralytics YOLOv8, OpenCV, PyTorch, DMA camera pipelines, and Raspberry Pi 5 access control appliances.</p>
               </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
             </div>
-          </article>
-          <div class="beyond-gallery beyond-gallery-mendaki reveal">
-            <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: GoTech robotics and microcontroller workshop">
-              <img src="assets/mendaki-gotech-robotics.jpg" alt="Youth mentors and students with laptops and robotics kits at the GoTech SPARKS workshop" loading="lazy">
-              <figcaption>GoTech robotics &amp; STEM learning workshop</figcaption>
-            </figure>
-            <div class="gallery-column">
-              <figure class="gallery-item" tabindex="0" role="button" aria-label="View photo: Experiential team navigation trail">
-                <img src="assets/mendaki-experiential-trail.jpg" alt="Youths and mentors huddling over an activity map during team-building challenge" loading="lazy">
-                <figcaption>Experiential team-building &amp; trail challenge</figcaption>
-              </figure>
-              <div class="gallery-quote">
-                <span class="quote-symbol" aria-hidden="true">“</span>
-                <p>Demystifying tech and proving to youths that engineering isn't a closed club—it's theirs to build.</p>
-                <span class="quote-author">MENDAKI CLUB · PEER 2025</span>
+            <div class="capability-item reveal">
+              <span>03</span>
+              <div class="cap-info">
+                <strong>Machine Learning &amp; Analytics</strong>
+                <p>Predictive telemetry pipelines, feature engineering, statistical profiling (SciPy, scikit-learn, Pandas, NumPy), and Dockerized ML workflows.</p>
               </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+            </div>
+            <div class="capability-item reveal">
+              <span>04</span>
+              <div class="cap-info">
+                <strong>Systems Programming &amp; Architecture</strong>
+                <p>Modern C++17, Object-Oriented Design (SOLID), Strategy/Factory design patterns, and in-memory execution engines.</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+            </div>
+            <div class="capability-item reveal">
+              <span>05</span>
+              <div class="cap-info">
+                <strong>Digital Logic &amp; FPGA Synthesis</strong>
+                <p>Deterministic Finite State Machines (FSM), sequential logic design, VHDL, and Xilinx Vivado on Basys 3 targets.</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
             </div>
           </div>
         </div>
-
       </section>
 
-      <section class="journey section" aria-labelledby="journey-heading"><div class="journey-header reveal"><h2 id="journey-heading">A little backstory.</h2><p>Mechanical foundations. Emergency response. Now, computer engineering.</p></div><div class="timeline"><div class="timeline-item reveal"><span class="timeline-year">2020</span><h3>Mechanical Engineering</h3><p>Ngee Ann Polytechnic<br>Diploma, 2020-2023</p></div><div class="timeline-item reveal"><span class="timeline-year">2023</span><h3>Fire &amp; Rescue Specialist</h3><p>Singapore Civil Defence Force<br>National Service, 2023-2025<br>NDP 2024 &amp; F1 Standby</p></div><div class="timeline-item reveal"><span class="timeline-year">2025</span><h3>Computer Engineering</h3><p>Singapore Institute of Technology<br>BEng (Hons), expected May 2028<br>MENDAKI Youth Mentor</p></div><div class="timeline-item reveal"><span class="timeline-year">2026<span>↗</span></span><h3>Building &amp; giving back</h3><p>Engineering team projects<br>Helix FYE Facilitator</p></div></div></section>
+      <!-- 6. WORK EXPERIENCE / TRACK RECORD -->
+      <section id="experience" class="experience-section">
+        <div class="new-shell">
+          <p class="section-label">Work Experience</p>
+          <div class="experience-heading">
+            <h2>Experience &amp;<br/><span>Field History.</span></h2>
+            <p>A history of operational discipline, high-stakes emergency response, and leadership under pressure.</p>
+          </div>
+          <div class="experience-list">
+            <article class="experience-row reveal">
+              <div class="experience-meta">
+                <span class="font-mono text-xs uppercase tracking-wider font-semibold">May 2023 — May 2025</span>
+                <span class="exp-loc-text">Singapore</span>
+              </div>
+              <div class="experience-body">
+                <strong>Fire &amp; Rescue Specialist <span class="exp-company">@ Singapore Civil Defence Force (SCDF)</span></strong>
+                <p>Full-Time National Service (NSF). Deployed to frontline structural fire suppression, vehicular rescue, and high-profile national emergency standbys.</p>
+                <div class="experience-details">
+                  <ul class="exp-highlights-list">
+                    <li>Deployed across structural firefighting and urban search-and-rescue operations; operated SCBA and dynamic water relays under emergency conditions.</li>
+                    <li>Stationed on rapid emergency standby for high-profile national events (F1 Singapore Grand Prix Marina Bay, NDP 2024 TD40).</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
 
-      <section class="contact section" id="contact" aria-labelledby="contact-heading"><div class="contact-top reveal"><p>Have a project, an opportunity,<br>or a good engineering problem?</p><span aria-hidden="true">↙</span></div><h2 id="contact-heading" class="reveal">Let's make<br><em>something.</em></h2><div class="contact-bottom"><a class="email-link" href="mailto:izzfaris14@gmail.com">izzfaris14@gmail.com <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" aria-label="Copy email address">Copy email</button><span id="copy-status" class="copy-status" role="status"></span><div class="social-links"><a href="https://www.linkedin.com/in/izz-faris-ceg/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/izzfaris14" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
+            <article class="experience-row reveal">
+              <div class="experience-meta">
+                <span class="font-mono text-xs uppercase tracking-wider font-semibold">Jul 2025 — Sep 2025</span>
+                <span class="exp-loc-text">Singapore</span>
+              </div>
+              <div class="experience-body">
+                <strong>Substitute Teacher <span class="exp-company">@ Ministry of Education (MOE)</span></strong>
+                <p>Delivered instruction, maintained student engagement, and managed academic schedules across primary and secondary classrooms.</p>
+                <div class="experience-details">
+                  <ul class="exp-highlights-list">
+                    <li>Delivered lessons and managed classrooms in the absence of regular teachers, ensuring continuity in learning.</li>
+                    <li>Developed adaptability, classroom management, and ability to connect with diverse student age groups.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. EDITORIAL CONTACT SECTION -->
+      <section class="reach-section" id="contact" aria-labelledby="contact-heading">
+        <div class="new-shell reach-grid">
+          <div>
+            <p class="section-label">Reach out</p>
+            <h2 id="contact-heading">Let's Build<br/><span>Together.</span></h2>
+            <p>For technical collaboration, engineering opportunities, or systems discussions.</p>
+          </div>
+          <div class="editorial-contact-actions">
+            <a class="contact-email-btn" href="mailto:izzfaris14@gmail.com">
+              <span>izzfaris14@gmail.com</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+            </a>
+            <button class="copy-email-btn" type="button" aria-label="Copy email address">
+              <span>Copy Address</span>
+            </button>
+            <span id="copy-status" class="copy-status-msg" role="status"></span>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer><a href="#home" class="wordmark" aria-label="Izz Faris, back to top"><strong>IZZ FARIS</strong></a><p>Izz Faris Putra Bin Maskhurin</p><span>© 2026</span><a href="#home">Back to top ↑</a></footer>
+
+    <footer class="editorial-footer">
+      <div class="new-shell editorial-footer-inner">
+        <div>
+          <a href="#home" class="font-bold text-sm text-white no-underline">IZZ FARIS</a>
+          <span class="ml-4 text-xs text-[#71717a]">SIT Computer Engineering · Singapore</span>
+        </div>
+        <div class="footer-links-row">
+          <a href="projects.html" class="hover:text-[var(--emerald)] transition-colors">Archive</a>
+          <a href="showroom.html" class="ml-4 hover:text-[var(--emerald)] transition-colors">Showroom</a>
+          <a href="#home" class="ml-6 hover:text-[var(--emerald)] transition-colors">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
   </div>
 
-  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button type="button" class="dialog-close" aria-label="Close project details">Close <span aria-hidden="true">×</span></button><div id="dialog-content"></div></div></dialog>
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <button type="button" class="dialog-close" aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
 </body>
 </html>
